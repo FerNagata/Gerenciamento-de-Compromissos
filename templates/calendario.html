@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <nav>
+        <div class="logo">CALENDARIO</div>
+        <div class="nav-items">
+            <a href="/calendario">Inicio</a>
+            <a href="/visaoGeral">Visão Geral</a>
+            <a href="/">Sair</a>
+        </div>
+    </nav>
+    
+    
+    <div class="calendario">
+        <div class="cabecalho-calendario">
+            <span class="opcao-mes" id="opcao-mes">Janeiro</span>
+            <div class="opcao-ano">
+                <span class="mudanca-ano" id="ano-anterior">
+                    <pre><</pre>
+                </span>
+                <span id="ano">2023</span>
+                <span class="mudanca-ano" id="proximo-ano">
+                    <pre>></pre>
+                </span>
+            </div>
+        </div>   
+        
+        <div class="corpo-calendario">
+            <div class="dias-semana">
+                <div>Domingo</div>
+                <div>Segunda</div>
+                <div>Terça</div>
+                <div>Quarta</div>
+                <div>Quinta</div>
+                <div>Sexta</div>
+                <div>Sábado</div>
+            </div>
+            <div class="dias"></div>
+            <div class="lista-mes"></div>
+        </div>
+        
+        <div class="compromisso" methods="GET">
+            <div class="data-compromisso">25/04/2023</div>
+            
+            <div class="compromisso-dia">
+                <!-- Aqui terá os compromissos do dia -->
+            </div>
+            
+            <div class="add-compromisso" id="add-compromisso">
+                <button onclick="addCompromisso(this)" class="add">+ adicionar compromisso</button>
+                
+                <form class="informacoes">
+                    <div class="titulo">
+                        <label class="form-label">Título: </label>
+                        <input type="text" placeholder="títilo" required>
+                    </div>
+                    <div class="hora">
+                        <label class="form-label">Hora: </label>
+                        <input type="time" required>
+                    </div>
+                    <div class="duracao">
+                        <label class="form-label">Duração: </label>
+                        <input type="text" required>
+                    </div>
+                    <div class="localizacao">
+                        <label class="form-label">Localização: </label>
+                        <input type="text" placeholder="localização" required>
+                    </div>
+                    <div class="descricao">
+                        <label class="form-label">Descrição: </label>
+                        <input type="text" placeholder="descrição">
+                    </div>
+                    <div class="participantes">
+                        <label class="form-label">Participantes: </label>
+                        <input type="text" placeholder="Participantes">
+                    </div>
+                    
+                    <button onclick="salva(this)" class="submit" type="submit">Salvar</button>
+                </form>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{url_for('static', filename='calendario.js')}}"></script>
+    
+</body>
+</html>

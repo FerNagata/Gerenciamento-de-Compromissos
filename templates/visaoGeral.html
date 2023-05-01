@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+    <!-- <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"> -->
+    <link rel="stylesheet" href="{{url_for('static', filename='visaoGeral.css')}}">
+
+</head>
+<body>
+    <nav>
+        <div class="logo">CALENDARIO</div>
+        <div class="nav-items">
+            <a href="/calendario">Inicio</a>
+            <a href="/visaoGeral">Visão Geral</a>
+            <a href="/">Sair</a>
+        </div>
+    </nav>
+
+    <div class="periodos">
+        <div class="hoje">
+            <div class="cabecalho">HOJE</div>
+            <div class="corpo">
+                <!-- Aqui ficará os eventos do dia -->
+            </div>
+        </div>
+        <div class="semana">
+            <div class="cabecalho">SEMANA</div>
+            <div class="corpo">
+                <!-- Aqui ficará os eventos da semana -->                
+            </div>
+        </div>
+        <div class="mes">
+            <div class="cabecalho">MÊS</div>
+            <div class="corpo">
+                <!-- Aqui ficará os eventos do mes -->
+            </div>
+        </div>
+    </div>
+
+    <script src="{{url_for('static', filename='visaoGeral.js')}}"></script>
+
+</body>
+</html>

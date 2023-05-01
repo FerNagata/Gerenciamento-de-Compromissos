@@ -1,0 +1,5 @@
+.venv
+
+ui_test/node_modules
+
+json
