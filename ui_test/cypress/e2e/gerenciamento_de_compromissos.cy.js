@@ -18,8 +18,6 @@ describe('teste do software de gerenciamento de compromissos', () => {
         cy.get('.senha').type("test123");
         cy.wait(2000);
         cy.get('.submit').click();
-        // cy.get('[href="/visaoGeral"]').click();
-        // cy.get('.hoje > div').should('have.text', "HOJE");
     });
 
     it('Escolhendo mes', () => {
